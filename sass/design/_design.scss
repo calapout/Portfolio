@@ -1,23 +1,69 @@
+//initialisation
 a{
     text-decoration: none;
+    color: white;
+    &:hover{
+        color: blue;
+    }
+
+    &:focus{
+        color: red;
+    }
+
+    &:visited{
+        color:white;
+    }
 }
 
+/**
+*
+*
+*
+************************************************************ CSS ******************************************************************
+*
+*
+*/
 body{
     background-color: aquamarine;
+    width: 100vw;
 }
 
-.header{
+label{
+    i{
+        font-size: 3em;
+    }
+}
+
+.menu{
     background-color: darkblue;
-    
+    width: 100%;
+
     nav{
+        height: 100%;
         background-color: darkgrey;
+        text-align: center;
+        
         a{
-            color: white;
+            span{
+                color: white;
+                &:hover{
+                    color: orange;
+                }
+            
+                &:focus{
+                    color: red;
+                }
+            }
         }  
     }
 }
 
-main{
+#global{
+    width: 200vw;
+}
+
+.main{
+    width: 100%;
     background-color: darkred;
     #bio{
         background-color: aqua;
@@ -32,7 +78,7 @@ main{
     }
 }
 
-footer{
+.footer{
     background-color: brown;
 
     #reseauxSociaux{

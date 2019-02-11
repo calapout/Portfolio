@@ -349,53 +349,142 @@ template {
 */
 a {
   text-decoration: none;
-}
-
-body {
-  background-color: aquamarine;
-}
-
-.header {
-  background-color: darkblue;
-}
-
-.header nav {
-  background-color: darkgrey;
-}
-
-.header nav a {
   color: white;
 }
 
-main {
+a:hover {
+  color: blue;
+}
+
+a:focus {
+  color: red;
+}
+
+a:visited {
+  color: white;
+}
+
+/**
+*
+*
+*
+************************************************************ CSS ******************************************************************
+*
+*
+*/
+body {
+  background-color: aquamarine;
+  width: 100vw;
+}
+
+label i {
+  font-size: 3em;
+}
+
+.menu {
+  background-color: darkblue;
+  width: 100%;
+}
+
+.menu nav {
+  height: 100%;
+  background-color: darkgrey;
+  text-align: center;
+}
+
+.menu nav a span {
+  color: white;
+}
+
+.menu nav a span:hover {
+  color: orange;
+}
+
+.menu nav a span:focus {
+  color: red;
+}
+
+#global {
+  width: 200vw;
+}
+
+.main {
+  width: 100%;
   background-color: darkred;
 }
 
-main #bio {
+.main #bio {
   background-color: aqua;
 }
 
-main #projets {
+.main #projets {
   background-color: orangered;
 }
 
-main #jams {
+.main #jams {
   background-color: magenta;
 }
 
-footer {
+.footer {
   background-color: brown;
 }
 
-footer #reseauxSociaux {
+.footer #reseauxSociaux {
   background-color: yellowgreen;
 }
 
-footer #contact {
+.footer #contact {
   background-color: green;
 }
 
 /**
     Grille et Flex
 */
+#global {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+/**
+    Menu
+*/
+#BurgerCheckbox ~ #global {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+#BurgerCheckbox:checked ~ #global {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+/**
+    Menu
+*/
+#global {
+  -webkit-transition: 1s, -webkit-transform;
+  transition: 1s, -webkit-transform;
+  transition: transform, 1s;
+  transition: transform, 1s, -webkit-transform;
+}
 /*# sourceMappingURL=style.css.map */

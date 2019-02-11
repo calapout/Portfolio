@@ -1,0 +1,7 @@
+#BurgerCheckbox ~#global{
+    transform: translateX(-100vw);
+}
+
+#BurgerCheckbox:checked ~#global{
+    transform: translateX(0);
+}

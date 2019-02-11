@@ -1,0 +1,45 @@
+a{
+    text-decoration: none;
+}
+
+body{
+    background-color: aquamarine;
+}
+
+.header{
+    background-color: darkblue;
+    
+    nav{
+        background-color: darkgrey;
+        a{
+            color: white;
+        }  
+    }
+}
+
+main{
+    background-color: darkred;
+    #bio{
+        background-color: aqua;
+    }
+
+    #projets{
+        background-color: orangered;
+    }
+
+    #jams{
+        background-color: magenta;
+    }
+}
+
+footer{
+    background-color: brown;
+
+    #reseauxSociaux{
+        background-color: yellowgreen;
+    }
+
+    #contact{
+        background-color: green;
+    }
+}

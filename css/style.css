@@ -29,6 +29,8 @@ body {
    */
 main {
   display: block;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -37,7 +39,11 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
 }
 
 /* Grouping content
@@ -344,26 +350,63 @@ template {
   display: none;
 }
 
+section {
+  margin: 0;
+}
+
+/**
+    Grille et Flex
+*/
+.menu {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9;
+}
+
+.menu nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#BurgerIcon {
+  position: fixed;
+  top: 0.1em;
+  left: 0.1em;
+  z-index: 10;
+}
+
+.footer {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 2;
+}
+
 /**
     Design
 */
-a {
-  text-decoration: none;
-  color: white;
-}
-
-a:hover {
-  color: blue;
-}
-
-a:focus {
-  color: red;
-}
-
-a:visited {
-  color: white;
-}
-
 /**
 *
 *
@@ -372,24 +415,45 @@ a:visited {
 *
 *
 */
-body {
+body, html {
+  height: 100vh;
+  width: 100%;
   background-color: aquamarine;
-  width: 100vw;
+  text-align: center;
+}
+
+label {
+  background-color: rgba(0, 0, 0, 0.65);
+  padding: 1em;
+  border-radius: 100%;
 }
 
 label i {
-  font-size: 3em;
+  font-size: 1.5em;
+  color: white;
 }
 
 .menu {
-  background-color: darkblue;
+  background-color: rgba(0, 0, 0, 0.95);
   width: 100%;
+  height: 100%;
 }
 
 .menu nav {
-  height: 100%;
-  background-color: darkgrey;
-  text-align: center;
+  margin-top: 15%;
+  height: 85%;
+}
+
+.menu nav a {
+  text-decoration: none;
+  background-color: darkred;
+  padding: 2.5em;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.menu nav a:hover > span {
+  color: orange;
 }
 
 .menu nav a span {
@@ -404,12 +468,7 @@ label i {
   color: red;
 }
 
-#global {
-  width: 200vw;
-}
-
 .main {
-  width: 100%;
   background-color: darkred;
 }
 
@@ -427,64 +486,79 @@ label i {
 
 .footer {
   background-color: brown;
+  -webkit-box-shadow: 0px -2px 20px 5px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px -2px 20px 5px rgba(0, 0, 0, 0.75);
 }
 
-.footer #reseauxSociaux {
-  background-color: yellowgreen;
+.footer a {
+  text-decoration: none;
+  color: black;
+}
+
+.footer a:visited {
+  color: black;
+}
+
+.footer div {
+  padding: 0.5em;
+  width: 90%;
+}
+
+.footer div div {
+  width: 100%;
 }
 
 .footer #contact {
-  background-color: green;
-}
-
-/**
-    Grille et Flex
-*/
-#global {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: stretch;
-      -ms-flex-align: stretch;
-          align-items: stretch;
+  border-bottom: 1px solid black;
 }
 
 /**
     Menu
 */
-#BurgerCheckbox ~ #global {
+#BurgerCheckbox ~ #BurgerIcon > i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#BurgerCheckbox ~ .menu {
   -webkit-transform: translateX(-100vw);
           transform: translateX(-100vw);
 }
 
-#BurgerCheckbox:checked ~ #global {
+#BurgerCheckbox:checked ~ #BurgerIcon {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+#BurgerCheckbox:checked ~ #BurgerIcon i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: black;
+}
+
+#BurgerCheckbox:checked ~ .menu {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
 
 /**
-    Menu
+    Animations
 */
-#global {
-  -webkit-transition: 1s, -webkit-transform;
-  transition: 1s, -webkit-transform;
-  transition: transform, 1s;
-  transition: transform, 1s, -webkit-transform;
+.menu {
+  -webkit-transition: top 1s, left 1s, -webkit-transform 1s;
+  transition: top 1s, left 1s, -webkit-transform 1s;
+  transition: transform 1s, top 1s, left 1s;
+  transition: transform 1s, top 1s, left 1s, -webkit-transform 1s;
+}
+
+#BurgerIcon {
+  -webkit-transition: background-color 1s;
+  transition: background-color 1s;
+}
+
+#BurgerIcon i {
+  -webkit-transition: top 1s, left 1s, color 1s, -webkit-transform 1s;
+  transition: top 1s, left 1s, color 1s, -webkit-transform 1s;
+  transition: transform 1s, top 1s, left 1s, color 1s;
+  transition: transform 1s, top 1s, left 1s, color 1s, -webkit-transform 1s;
 }
 /*# sourceMappingURL=style.css.map */

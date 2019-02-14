@@ -2,6 +2,11 @@
     Design
 */
 @import "normalize";
+
+/**
+    Grille et Flex
+*/
+@import "layout/layout";
     
 /**
     Design
@@ -9,16 +14,11 @@
 @import "design/design";
 
 /**
-    Grille et Flex
-*/
-@import "layout/layout";
-
-/**
     Menu
 */
 @import "menu/menu";
 
 /**
-    Menu
+    Animations
 */
 @import "animation/animation";

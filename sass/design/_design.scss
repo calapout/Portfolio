@@ -1,49 +1,56 @@
-//initialisation
-a{
-    text-decoration: none;
-    color: white;
-    &:hover{
-        color: blue;
-    }
+/**
+*
+*
+*   Global Section
+*
+*
+*/
 
-    &:focus{
-        color: red;
-    }
-
-    &:visited{
-        color:white;
-    }
+body, html{
+    height: 100vh;
+    width: 100%;
+    background-color: aquamarine;
+    text-align: center;
 }
 
 /**
 *
 *
-*
-************************************************************ CSS ******************************************************************
+*   Main Menu
 *
 *
 */
-body{
-    background-color: aquamarine;
-    width: 100vw;
-}
 
 label{
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 1em;
+    border-radius: 100%;
     i{
-        font-size: 3em;
+        font-size: 1.5em;
+        color: white;
     }
 }
 
 .menu{
-    background-color: darkblue;
+    background-color: rgba(0, 0, 0, 0.95);
     width: 100%;
-
+    height: 100%;
     nav{
-        height: 100%;
-        background-color: darkgrey;
-        text-align: center;
-        
+        margin-top: 15%;
+        height: 85%;
+
         a{
+            text-decoration: none;
+            background-color: darkred;
+            padding: 2.5em;
+
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+
+            &:hover>span{
+                color: orange;
+            }
+
             span{
                 color: white;
                 &:hover{
@@ -58,12 +65,20 @@ label{
     }
 }
 
-#global{
-    width: 200vw;
-}
+/**
+*
+*
+*   Main Section
+*
+*
+*/
 
 .main{
-    width: 100%;
+
+    header{
+        
+    }
+
     background-color: darkred;
     #bio{
         background-color: aqua;
@@ -78,14 +93,41 @@ label{
     }
 }
 
+/**
+*
+*
+*   footer Section
+*
+*
+*/
+
+
 .footer{
     background-color: brown;
+    box-shadow: 0px -2px 20px 5px rgba(0,0,0,0.75);
+
+    a{
+        text-decoration: none;
+        color: black;
+        &:visited{
+            color: black;
+        }
+    }
+
+    div{
+        padding: 0.5em;
+        width: 90%;
+        div{
+            width: 100%;
+        }
+    }
 
     #reseauxSociaux{
-        background-color: yellowgreen;
+        // background-color: yellowgreen;
     }
 
     #contact{
-        background-color: green;
+        // background-color: green;
+        border-bottom: 1px solid black;
     }
 }

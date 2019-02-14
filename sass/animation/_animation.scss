@@ -1,3 +1,10 @@
-#global{
-    transition: transform, 1s;
+.menu{
+    transition: transform 1s, top 1s, left 1s;
+}
+
+#BurgerIcon{
+    transition: background-color 1s;
+    i{
+        transition: transform 1s, top 1s, left 1s, color 1s;
+    }
 }

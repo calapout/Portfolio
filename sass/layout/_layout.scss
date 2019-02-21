@@ -7,7 +7,7 @@
     nav{
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: flex-end;
         align-items: stretch;
     }   
 }
@@ -19,25 +19,33 @@
     z-index: 10;
 }
 
-#bio, #projets{
-    border-bottom: 3px solid black;
+#bio{
+    z-index: 0;
+}
+
+#bioWrapper{
+    display: grid;
+    grid-template-columns: 1fr;
 }
 
 #projets, #jams{
     &>header{
         padding: 0.5em 0;
     }
-
-    &>div>div{
-        margin: 1em;
-        border: 1px solid black;
-    }
 }
-
 .wrapper{
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(6, 1fr);
+
+    &>div{
+        margin: 1em;
+        border: 3px solid black
+    }
+}
+
+#playable{
+    border: 3px solid rgb(0, 78, 7);
 }
 
 .footer{
@@ -49,14 +57,35 @@
     z-index: 2;
 }
 
-@media screen and (min-width: 512px){
+/********************************************** Tablette Écran ****************************************************/
+@media screen and (min-width: 768px){
     .wrapper{
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(3, 1fr);
     }
+
+    #bioWrapper{
+        grid-template-columns: 1fr 2fr;
+    }
+
+    #bioDescription{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        p{
+            width: 60%;
+            margin: 0 auto;
+        }
+    }
+
+    .footer{
+        flex-direction: row;
+    }
 }
 
-@media screen and (min-width: 1024px){
+/********************************************** Grand Écran ****************************************************/
+@media screen and (min-width: 1200px){
     .wrapper{
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: repeat(2, 1fr);

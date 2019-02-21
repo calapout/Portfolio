@@ -9,7 +9,6 @@
 body, html{
     height: 100vh;
     width: 100%;
-    background-color: darkblue;
     text-align: center;
 }
 
@@ -36,10 +35,10 @@ label{
     width: 100%;
     height: 100%;
     nav{
-        margin-top: 15%;
-        height: 85%;
+        margin-top: 2.5em;
+        height: 80vh;
 
-        a{
+        &>a{
             text-decoration: none;
             background-color: darkred;
             padding: 2.5em;
@@ -47,11 +46,15 @@ label{
             border-top: 1px solid black;
             border-bottom: 1px solid black;
 
+            margin-bottom: 0.75em;
+            &:last-child{
+                margin-bottom: 0;
+            }
             &:hover>span{
                 color: orange;
             }
 
-            span{
+            &>span{
                 color: white;
                 &:hover{
                     color: orange;
@@ -75,28 +78,50 @@ label{
 
 .main{
 
-    /*.header{
-        padding: 1em;
-        font-size: 0.8em;
-        background-color: rgb(56, 56, 56);
-        color: white;
-    }*/
+    background-color: rgb(150, 0, 0);
 
-    background-color: darkred;
     #bio{
+        //padding: 0.5em;
+        box-shadow: inset 0px -15px 10px -10px rgba(0,0,0,0.75);
+        background-color: rgb(119, 119, 119);
 
+        &>header>h1{
+            padding: 0.4em;
+            color: white;
+            background-color: rgb(51, 50, 50);
+            box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.75);
+        }
+        &>div{
+            &>figure{
+                padding: 3em 0;
+                margin: 0;
+                //border-bottom: 3px solid black;
+                &>img{
+                    width: 10em;
+                    border-radius: 60px;
+                    box-shadow: 5px 5px 10px black;
+                }
+            }
 
+            &>div#bioDescription{
+                padding: 1em;
 
-        background-color: aqua;
+                &>h2{
+                    margin: 0.5em 0;
+                }
+            }
+        }
     }
+}
 
-    #projets{
-        background-color: orangered;
-    }
-
+#projets{
     #jams{
-        background-color: magenta;
+        margin-bottom: 0.5em;
     }
+}
+
+#jams{
+    margin-top: 0.5em;
 }
 
 /**
@@ -110,8 +135,8 @@ label{
 
 .footer{
     background-color: brown;
-    box-shadow: 0px -2px 20px 5px rgba(0,0,0,0.75);
-
+    box-shadow: inset 0px 5px 10px 3px rgba(0,0,0,0.75);
+    padding: 0.5em;
     a{
         text-decoration: none;
         color: black;
@@ -126,14 +151,50 @@ label{
         div{
             width: 100%;
         }
+
+        
     }
 
-    /*#reseauxSociaux{
-        // background-color: yellowgreen;
-    }*/
-
-    #contact{
-        // background-color: green;
-        border-bottom: 1px solid black;
+    #contact>p{
+            margin: 0.5em 0;
     }
+}
+
+hr {
+    display: block;
+    position: relative;
+    padding: 0;
+    height: 0;
+    width: 80%;
+    max-height: 0;
+    clear: both;
+    border: none;
+    border-top: 1px solid #000000;
+}
+
+@media screen and (min-width: 768px){
+    hr{
+        display: none;
+    }
+
+    body{
+        font-size: 1.5em;
+    }
+
+    .menu{
+        width: 30%;
+    }
+
+    .menu>nav>a{
+        padding: 1.8em;
+    }
+}
+
+@media screen and (min-height: 500px){
+    .menu>nav{
+        margin-top: 2em;        
+    }
+}
+
+@media screen and (min-height: 768px){
 }

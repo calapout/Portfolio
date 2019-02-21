@@ -14,9 +14,30 @@
 
 #BurgerIcon{
     position: fixed;
-    top: 0.1em;
-    left: 0.1em;
+    top: 0.5em;
+    left: 0.5em;
     z-index: 10;
+}
+
+#bio, #projets{
+    border-bottom: 3px solid black;
+}
+
+#projets, #jams{
+    &>header{
+        padding: 0.5em 0;
+    }
+
+    &>div>div{
+        margin: 1em;
+        border: 1px solid black;
+    }
+}
+
+.wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
 }
 
 .footer{
@@ -26,4 +47,18 @@
     justify-content: flex-start;
     align-items: center;
     z-index: 2;
+}
+
+@media screen and (min-width: 512px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .wrapper{
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+    }
 }

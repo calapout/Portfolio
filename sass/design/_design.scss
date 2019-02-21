@@ -9,7 +9,7 @@
 body, html{
     height: 100vh;
     width: 100%;
-    background-color: aquamarine;
+    background-color: darkblue;
     text-align: center;
 }
 
@@ -75,12 +75,18 @@ label{
 
 .main{
 
-    header{
-        
-    }
+    /*.header{
+        padding: 1em;
+        font-size: 0.8em;
+        background-color: rgb(56, 56, 56);
+        color: white;
+    }*/
 
     background-color: darkred;
     #bio{
+
+
+
         background-color: aqua;
     }
 
@@ -122,9 +128,9 @@ label{
         }
     }
 
-    #reseauxSociaux{
+    /*#reseauxSociaux{
         // background-color: yellowgreen;
-    }
+    }*/
 
     #contact{
         // background-color: green;

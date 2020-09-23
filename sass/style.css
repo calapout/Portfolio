@@ -595,7 +595,7 @@ label i {
 *
 */
 .main {
-  color: white;
+  background-color: #c7c7c7;
 }
 
 .main #bio {
@@ -650,6 +650,8 @@ label i {
 }
 
 .wrapper > div > figure > img {
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
   width: 100%;
   height: 100%;
@@ -672,11 +674,7 @@ label i {
 }
 
 #projets #jams {
-  margin-bottom: 0.5em;
-}
-
-#jams {
-  margin-top: 0.5em;
+  margin: 0.5em 0;
 }
 
 /**
@@ -737,7 +735,7 @@ hr {
   max-height: 0;
   clear: both;
   border: none;
-  border-top: 1px solid white;
+  border-top: 1px solid black;
   margin-top: 1.5em;
   margin-bottom: 1.5em;
 }
@@ -782,6 +780,7 @@ hr {
   }
   .wrapper > div.playable {
     cursor: pointer;
+    border: 0.5em solid #004e07;
   }
 }
 

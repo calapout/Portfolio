@@ -8,7 +8,7 @@ for(let i = 0; i< imgs.length; i++){
 }
 
 /************************************** loading async du CSS ***************************************************/
-$.getJSON("module_js/css.json", RenderCssOnLoad);
+loadJSON("./module_js/css.json", RenderCssOnLoad);
 
 /**
  * @summary Génère les link permettant de récupérer le CSS à afficher
@@ -35,7 +35,6 @@ function makeItPlayable(){
     let playables = document.querySelectorAll("div.playable");
     if(window.mobileAndTabletcheck() == false){
         for(let i = 0; i < playables.length; i++){
-            playables[i].style.borderColor = "rgb(0,78,7)";
             playables[i].addEventListener("click", OnClickPlayable, false);
             playables[i].addEventListener("mouseover",OnMouseEventPlayable, true);
             playables[i].addEventListener("mouseleave", OnMouseEventPlayable, true);
@@ -158,7 +157,7 @@ function assignRowByColumn(colNumber, wrappers){
 
 /************************************** génération des div ***************************************************/
 //Ligne qui permet de récupérer les image à afficher
-$.getJSON("module_js/projets.json", renderOnLoaded);
+loadJSON("./module_js/projets.json", renderOnLoaded);
 
 
 /**
@@ -202,3 +201,17 @@ function renderOnLoaded(aProject){
     wrappIt();
     makeItPlayable();
 }
+
+function loadJSON(url, callback) {   
+
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', url, true);
+        xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(JSON.parse(xobj.responseText));
+          }
+    };
+    xobj.send(null);  
+ }

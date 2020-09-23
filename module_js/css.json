@@ -1,6 +1,6 @@
 [
     {
-        "href":"css/style.css",
+        "href":"./sass/style.css",
         "crossorigin": "",
         "integrity": ""
     },

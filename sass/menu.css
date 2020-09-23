@@ -1,0 +1,25 @@
+#BurgerCheckbox ~ #BurgerIcon > i {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+#BurgerCheckbox ~ .menu {
+  -webkit-transform: translateX(-100vw);
+          transform: translateX(-100vw);
+}
+
+#BurgerCheckbox:checked ~ #BurgerIcon {
+  background: rgba(255, 255, 255, 0.95);
+}
+
+#BurgerCheckbox:checked ~ #BurgerIcon i {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  color: black;
+}
+
+#BurgerCheckbox:checked ~ .menu {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+/*# sourceMappingURL=menu.css.map */

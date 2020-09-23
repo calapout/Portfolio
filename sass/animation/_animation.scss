@@ -1,10 +1,20 @@
 .menu{
-    transition: transform 1s, top 1s, left 1s;
+    transition: transform 500ms, top 300ms, left 500ms;
+    a {
+        transition: background-color 300ms;
+        span {
+            transition: color 300ms;
+        }
+    }
 }
 
 #BurgerIcon{
-    transition: background-color 1s;
+    transition: background-color 300ms;
     i{
-        transition: transform 1s, top 1s, left 1s, color 1s;
+        transition: transform 300ms, top 300ms, left 300ms, color 300ms;
     }
+}
+
+.playable {
+    transition: border-color 300ms;
 }

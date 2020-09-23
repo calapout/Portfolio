@@ -36,8 +36,7 @@ function makeItPlayable(){
     const isMobile = window.mobileAndTabletcheck();
 
     if(isMobile){
-        document.querySelector("#messageMobile").style.display = "block";
-        document.querySelector("#messageMobile").style.padding = "0.3em";
+        document.querySelector("#messageMobile").style.display = "flex";
         return;
     }
 

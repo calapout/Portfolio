@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-135920461-1"></script>
+        <script async>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-135920461-1');
+        </script>
+
+        
+        <!-- METAS -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=6.0, user-scalable=yes" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="theme-color" content="#333232"/>
+
+        <!-- Description -->
+        <meta name="title" content="Portfolio de Jimmy Tremblay-Bernier"/>
+        <title>Portfolio de Jimmy Tremblay-Bernier</title>
+
+        <meta name="description" content="Le portfolio de Jimmy Tremblay-Bernier. Vous pouvez y trouver divers projets réaliser dans le cadre de jams ou de projets"/>
+
+        <!-- canonical link -->
+        <link rel="canonical" href="https://jimmytremblaybernier.ca" />
+        <!-- favicon -->
+        <link rel="icon" type="image/png" href="images/favicon.png" sizes="196x196">
+
+        <!-- JS -->        
+    </head>
+    <body>
+        <input type="checkbox" style="display:none;" id="BurgerCheckbox" checked="false">
+        <label id="BurgerIcon" for="BurgerCheckbox"><i class="fas fa-bars"></i></label>
+        <aside class="menu">
+            <nav class="navigation">
+                <a href="#bio"><span>À propos de moi</span></a>
+                <a href="#projets"><span>Projets personnels</span></a>
+                <a href="#jams"><span>Game Jams</span></a>
+                <a href="#contact"><span>Contact</span></a>
+            </nav>
+        </aside>
+
+        <main class="main">
+            <!-- <header class="header">
+                <h1>Jimmy Tremblay-Bernier</h1>
+            </header> -->
+            <section id="bio">
+                <header><h1>À propos de moi</h1></header>
+                <div id="bioWrapper">
+                    <figure id="myFace">
+                        <img src="images/Tremblay-Bernier_Jimmy.jpg" title="Une photo de moi" alt="Une photo de moi">
+                    </figure>
+                    <hr>
+                    <div id="bioDescription">
+                        <h2>Jimmy Tremblay-Bernier</h2>
+                        <p>Étudiant en multimédia et passionné de jeux. Je me spécialise actuellement en programmation de jeu, tout en me servant de mes compétences en développement web et en linux pour développer et héberger mes propres sites webs</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projets">
+                <h4 id="messageMobile" style="display:none;">** Veuillez passer sur une version desktop si vous voulez essayer certains projets **</h4>
+                <header><h2>Projets personnels</h2></header>
+                <div class="wrapper">
+                </div>
+            </section>
+            
+            <hr id="hrSection">
+            
+            <section id="jams">
+                <header><h2>Les GameJams auxquelles j'ai participé</h2></header>
+                <div class="wrapper">
+                </div>
+            </section>
+
+            <footer class="footer">
+                <div id="contact">
+                    <p>Jimmy Tremblay-Bernier - 2019</p>
+                    <p>Email: tremblaybernierjimmy@gmail.com</p>
+                </div>
+                <hr>
+                <div id="reseauxSociaux">
+                    <div><a href="https://github.com/calapout"><i class="fab fa-github-square"></i> - Github</a></div>
+                    <div><a href="https://twitter.com/BernierTremblay"><i class="fab fa-twitter-square"></i> - Twitter</a></div>
+                    <div><a href="https://www.linkedin.com/in/jimmy-tremblay-bernier/"><i class="fab fa-linkedin"></i> - Linkedin</a></div>
+                </div>
+            </footer>
+        </main>
+        <!-- module JS -->
+        <script defer src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script defer src="module_js/mobileDetection.min.js"></script>
+        <script defer type="module" src="./module_js/app.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
+    </body>
+</html>

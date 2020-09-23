@@ -1,0 +1,66 @@
+[
+    {
+        "id": "projets",
+        "projects": [
+            {
+                "fileName": "TetrisPhaser.png",
+                "isPlayable": true,
+                "url": "http://vps148260.vps.ovh.ca/calapout/phaser/TP1_tetris/",
+                "alt": "Tetris - Phaser",
+                "figcaption": "<strong>Tetris</strong> - Phaser"
+            },
+            
+            {
+                "url": "http://calapout.ca/heresTeddy/",
+                "fileName": "heresTeddy.png",
+                "isPlayable": true,
+                "alt": "Here's Teddy",
+                "figcaption": "<strong>Here's Teddy</strong> - Unity"
+            },         
+            
+            {
+                "fileName": "faitMoiUnDessin.png",
+                "isPlayable": true,
+                "url": "http://drawmything.calapout.ca/",
+                "alt": "Fait mon un dessin - Phaser",
+                "figcaption": "<strong>Fait moi un dessin</strong> - Phaser"
+            }
+        ]
+    },
+    {
+        "id": "jams",
+        "projects": [
+            {
+                "fileName": "matrixInfiltration.jpg",
+                "isPlayable": false,
+                "url": "",
+                "alt": "Matrix Infiltration",
+                "figcaption": "<strong>Matrix Infiltration</strong> - Ludum Dare 34 (2015)"
+            },
+
+            {
+                "fileName": "elementalPuzzler.jpg",
+                "isPlayable": false,
+                "url": "",
+                "alt": "Elemental Puzzler",
+                "figcaption": "<strong>Elemental Puzzler</strong> - Ludum Dare 35 (2016)"
+            },
+
+            {
+                "fileName": "aNightOfNightmare.png",
+                "isPlayable": true,
+                "url": "http://vps.kirthos.dyjix.eu/Site/Ld37/ANightOfNightmare.html",
+                "alt": "A Night of Nightmare",
+                "figcaption": "<strong>A Night of Nightmare</strong> - Ludum Dare 37 (2016)"
+            },
+
+            {
+                "fileName": "massacreALauberginn.png",
+                "isPlayable": true,
+                "url": "http://vps148260.vps.ovh.ca/massacreALaubergine/",
+                "alt": "Massacre à l'auberginn",
+                "figcaption": "<strong>Massacre à l'auberginn</strong> - Intercollégial de Valleyfield (2e place - 2019)"
+            }
+        ]
+    }
+]

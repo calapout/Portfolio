@@ -32,35 +32,47 @@ label{
     }
 }
 
+#messageMobile {
+    background-color: royalblue;
+    color: white;
+    padding: 1rem 0;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5;
+    position: relative;
+    z-index: 13;
+}
+
 .menu{
     background-color: rgba(0, 0, 0, 0.95);
     width: 100%;
-    height: 100%;
+    height: 100vh;
     nav{
-        margin-top: 2.5em;
-        height: 80vh;
+        height: 100%;
 
         &>a{
             text-decoration: none;
-            background-color: rgb(92, 0, 0);
-            padding: 2.5em;
+            background-color: rgb(199, 199, 199);
+            padding: 1.5em;
+            width: 60%;
 
             border-top: 1px solid black;
             border-bottom: 1px solid black;
+            border-radius: 10px;
 
             margin-bottom: 0.75em;
             &:last-child{
                 margin-bottom: 0;
             }
-            &:hover>span{
-                color: orange;
+            &:hover{
+                background-color: rgb(41, 41, 41);
+                &>span{
+                    color: white;
+                }
             }
 
             &>span{
-                color: white;
-                &:hover{
-                    color: orange;
-                }
+                color: black;
             
                 &:focus{
                     color: red;
@@ -80,18 +92,16 @@ label{
 
 .main{
     
-    background-color: rgb(92, 0, 0);
-    color: white;
+    background-color: rgb(199, 199, 199);
     #bio{
         //padding: 0.5em;
-        box-shadow: inset 0px -15px 10px -10px rgba(0,0,0,0.75);
         background-color: rgb(119, 119, 119);
         color: black;
         &>header>h1{
             padding: 0.4em;
             color: white;
             background-color: rgb(51, 50, 50);
-            box-shadow: 0px 5px 10px 3px rgba(0,0,0,0.75);
+            box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
         }
         &>div{
             &>figure{
@@ -101,7 +111,7 @@ label{
                 &>img{
                     width: 8em;
                     border-radius: 60px;
-                    box-shadow: 5px 5px 10px black;
+                    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
                 }
             }
 
@@ -116,14 +126,22 @@ label{
     }
 }
 
+.content {
+    box-shadow: 0px 0px 5px 5px rgba(0,0,0,0.75);
+    z-index: 10;
+    position: relative;
+}
+
 .wrapper{
     &>div{
         max-width: 100%;
         height: 15em;
-        border: 3px solid black;
-        border-radius: 25px;
+        max-height: 15em;
+        min-height: 15em;
+        border: 0.5em solid black;
         overflow: hidden;
-        box-shadow: 5px 5px 5px 1px rgba(0,0,0,0.75);
+        box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+        border-radius: 10px;
 
         &>figure{
             // max-width: 100%;
@@ -131,7 +149,9 @@ label{
             padding: 0;
             margin: 0;
 
+
             &>img{
+                object-fit: cover;
                 margin: 0;
                 width: 100%;
                 height: 100%;
@@ -153,17 +173,16 @@ label{
 
     &>div.playable{
         cursor: default;
+        &:hover {
+            border-color: rgb(0, 151, 13);
+        }
     }
 }
 
 #projets{
     #jams{
-        margin-bottom: 0.5em;
+        margin: 0.5em 0;
     }
-}
-
-#jams{
-    margin-top: 0.5em;
 }
 
 /**
@@ -177,7 +196,6 @@ label{
 
 .footer{
     background-color: rgb(119, 119, 119);
-    box-shadow: inset 0px 5px 10px 3px rgba(0,0,0,0.75);
     padding: 0.5em;
     color:black;
     a{
@@ -224,7 +242,7 @@ hr {
     max-height: 0;
     clear: both;
     border: none;
-    border-top: 1px solid white;
+    border-top: 1px solid black;
     margin-top: 1.5em;
     margin-bottom: 1.5em;
 }
@@ -280,6 +298,8 @@ hr {
 
         &>div.playable{
             cursor: pointer;
+            border: 0.5em solid rgb(0,78,7);
+
         }
     }
 

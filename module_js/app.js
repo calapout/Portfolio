@@ -3,12 +3,12 @@ document.querySelector('#BurgerCheckbox').checked = false;
 
 /************************************** loading async des images ***************************************************/
 let imgs = document.querySelectorAll("img");
-for(let i = 0; i< imgs.length; i++){
-    imgs[i].decoding = "async";
-}
+imgs.forEach(image => {
+    image.decoding = 'async';
+})
 
 /************************************** loading async du CSS ***************************************************/
-$.getJSON("module_js/css.json", RenderCssOnLoad);
+loadJSON("./module_js/css.json", RenderCssOnLoad);
 
 /**
  * @summary Génère les link permettant de récupérer le CSS à afficher
@@ -33,23 +33,17 @@ function RenderCssOnLoad(json){
  */
 function makeItPlayable(){
     let playables = document.querySelectorAll("div.playable");
-    if(window.mobileAndTabletcheck() == false){
-        for(let i = 0; i < playables.length; i++){
-            playables[i].style.borderColor = "rgb(0,78,7)";
-            playables[i].addEventListener("click", OnClickPlayable, false);
-            playables[i].addEventListener("mouseover",OnMouseEventPlayable, true);
-            playables[i].addEventListener("mouseleave", OnMouseEventPlayable, true);
-        }
-        document.querySelector("#messageMobile").style.display = "none";
+    const isMobile = window.mobileAndTabletcheck();
+
+    if(isMobile){
+        document.querySelector("#messageMobile").style.display = "flex";
+        return;
     }
-    else if(window.mobileAndTabletcheck() == true){
-        for(let i = 0; i < playables.length; i++){
-            playables[i].style.cursor = "default";
-        }
-        document.querySelector("#messageMobile").style.display = "block";
-        document.querySelector("#messageMobile").style.padding = "0.3em";
-    }
-    
+
+    playables.forEach(element => {
+        element.addEventListener("click", OnClickPlayable, false);
+    });
+   
 }
 
 /**
@@ -59,21 +53,6 @@ function makeItPlayable(){
 function OnClickPlayable(event){
     let tempTarget = GetParentDiv(event.target);
     window.open(tempTarget.dataset.url, '_blank');
-}
-
-/**
- * @summary Fonction qui gère les event de type over ou out sur les div jouable et change le border color en conséquence
- * @param {Object} event L'évênement qui appel la fonction
- */
-function OnMouseEventPlayable(event){
-    let tempTarget = GetParentDiv(event.target);
-
-    if(event.type == "mouseover"){
-        tempTarget.style.borderColor = "white";
-    }
-    else if(event.type == "mouseleave"){
-        tempTarget.style.borderColor = "rgb(0,78,7)";
-    }
 }
 
 /**
@@ -88,9 +67,7 @@ function GetParentDiv(child){
         if(tempTarget.nodeName == "DIV"){
             return tempTarget;
         }
-        else{
-            tempTarget = tempTarget.parentNode;
-        }
+        tempTarget = tempTarget.parentNode;
     }
 }
 
@@ -158,7 +135,7 @@ function assignRowByColumn(colNumber, wrappers){
 
 /************************************** génération des div ***************************************************/
 //Ligne qui permet de récupérer les image à afficher
-$.getJSON("module_js/projets.json", renderOnLoaded);
+loadJSON("./module_js/projets.json", renderOnLoaded);
 
 
 /**
@@ -172,7 +149,9 @@ function renderOnLoaded(aProject){
 
             //création de la div
             let tempsDiv = document.createElement('div');
-            if(aProject[i].projects[y].isPlayable == true)tempsDiv.classList.add("playable");
+            if(aProject[i].projects[y].isPlayable == true && !window.mobileAndTabletcheck()){
+                tempsDiv.classList.add("playable");
+            }
             tempsDiv.dataset.url = aProject[i].projects[y].url;
 
             //création de la figure
@@ -202,3 +181,17 @@ function renderOnLoaded(aProject){
     wrappIt();
     makeItPlayable();
 }
+
+function loadJSON(url, callback) {   
+
+    var xobj = new XMLHttpRequest();
+        xobj.overrideMimeType("application/json");
+        xobj.open('GET', url, true);
+        xobj.onreadystatechange = function () {
+          if (xobj.readyState == 4 && xobj.status == "200") {
+            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+            callback(JSON.parse(xobj.responseText));
+          }
+    };
+    xobj.send(null);  
+ }

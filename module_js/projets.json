@@ -5,13 +5,13 @@
             {
                 "fileName": "TetrisPhaser.png",
                 "isPlayable": true,
-                "url": "http://calapout.ca/TP1_tetris/",
+                "url": "/TP1_tetris/",
                 "alt": "Tetris - Phaser",
                 "figcaption": "<strong>Tetris</strong> - Phaser"
             },
             
             {
-                "url": "http://calapout.ca/heresTeddy/",
+                "url": "/heresTeddy/",
                 "fileName": "heresTeddy.png",
                 "isPlayable": true,
                 "alt": "Here's Teddy",
@@ -21,9 +21,9 @@
             {
                 "fileName": "faitMoiUnDessin.png",
                 "isPlayable": true,
-                "url": "http://calapout.ca/DrawMyThing",
+                "url": "/DrawMyThing",
                 "alt": "Fait mon un dessin - Phaser",
-                "figcaption": "<strong>Fait moi un dessin</strong> - Phaser"
+                "figcaption": "<strong>Fait moi un dessin</strong> - Phaser 3"
             }
         ]
     },
@@ -40,8 +40,8 @@
 
             {
                 "fileName": "elementalPuzzler.jpg",
-                "isPlayable": false,
-                "url": "#",
+                "isPlayable": true,
+                "url": "/elementalPuzzler/",
                 "alt": "Elemental Puzzler",
                 "figcaption": "<strong>Elemental Puzzler</strong> - Ludum Dare 35 (2016)"
             },
@@ -57,9 +57,25 @@
             {
                 "fileName": "massacreALauberginn.png",
                 "isPlayable": true,
-                "url": "http://calapout.ca/massacreALaubergine/",
+                "url": "/massacreALaubergine/",
                 "alt": "Massacre à l'auberginn",
                 "figcaption": "<strong>Massacre à l'auberginn</strong> - Intercollégial de Valleyfield (2e place - 2019)"
+            },
+
+            {
+                "fileName": "proteccTerra.png",
+                "isPlayable": true,
+                "url": "/Protecc_Terra",
+                "alt": "Protecc terra gameplay",
+                "figcaption": "<strong>Protecc Terra</strong> - Ludum Dare 46 (2019)"
+            },
+
+            {
+                "fileName": "doItForTheView.png",
+                "isPlayable": true,
+                "url": "https://jimmy-tremblay-bernier.itch.io/do-it-for-the-views",
+                "alt": "Do it For the Views",
+                "figcaption": "<strong>Do it For the Views</strong> - CocoJam (2020)"
             }
         ]
     }
